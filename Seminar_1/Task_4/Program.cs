@@ -6,6 +6,7 @@ Console.Write("Введите третье число: ");
 int c = Convert.ToInt32(Console.ReadLine());
 int Max;
 Max = a;   
+
 if (b > a) {
   Max = b; 
   }
