@@ -8,4 +8,4 @@ for (i = 0; num > 0; i++) {
     sum = sum + num % 10;
     num = num /10 ;
 }
-Console.WriteLine(sum);
+Console.WriteLine("Сумма чисел в числе " + " равна " + sum);
