@@ -22,8 +22,8 @@ for (int i = 0; i < array.GetLength(0); i++)
 Console.WriteLine("Введите координаты через пробел: ");
 var ab = Console.ReadLine()!.Split(" ");
 Int32 a, b;
-a = Convert.ToInt32(ab[1]); //Столбец
-b = Convert.ToInt32(ab[0]);//Строка
+a = Convert.ToInt32(ab[1]); 
+b = Convert.ToInt32(ab[0]);
 if (a > m && b > n)
     Console.WriteLine("Такого числа нет");
 else
