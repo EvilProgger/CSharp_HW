@@ -1,15 +1,13 @@
 ﻿Console.Clear();
 Console.Write("Введите количество строк и столбцов для первой матрицы через пробел: ");
 var s = Console.ReadLine()!.Split(" ");
-Int32 m, n;
 
 Console.Write("Введите количество строк и столбцов для второй матрицы через пробел: ");
 var q = Console.ReadLine()!.Split(" ");
-Int32 p;
 
-m = Convert.ToInt32(s[0]);
-n = Convert.ToInt32(s[1]);
-p = Convert.ToInt32(q[0]);
+int m = Convert.ToInt32(s[0]);
+int n = Convert.ToInt32(s[1]);
+int p = Convert.ToInt32(q[0]);
 
 int[,] firstMatrix = new int[m, n];
 CreateArray(firstMatrix);

@@ -1,18 +1,34 @@
 ﻿Console.Clear();
-Console.Write("Введите количество строк(m) и столбцов(n через пробел: ");
+Console.Write("Введите количество строк и столбцов через пробел: ");
 var s = Console.ReadLine()!.Split(" ");
-Int32 k, l, m, n;
-m = Convert.ToInt32(s[0]);
-n = Convert.ToInt32(s[1]);
+int m = Convert.ToInt32(s[0]);
+int n = Convert.ToInt32(s[1]);
+double[,] array = new double[m, n];
 Random rnd = new Random();
-double[,] A = new double[m, n];
 
-for (k = 0; k < m; k++)
+CreateArray(array);
+WriteArray(array);
+
+
+void CreateArray(double[,] array)
 {
-    for (l = 0; l < n; l++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        A[k, l] = 20.0 * rnd.Next() / 2147483648 - 10.0;
-        Console.Write(String.Format("{0,5:f1}", A[k, l]));
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(10, 100) / 10.0;
+        }
     }
-    Console.WriteLine();
+}
+
+void WriteArray(double[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write("{0,5:F2}" ,array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
 }

@@ -1,11 +1,8 @@
 ﻿Console.Clear();
 Console.Write("Введите количество строк и столбцов через пробел: ");
 var s = Console.ReadLine()!.Split(" ");
-Int32 m, n;
-m = Convert.ToInt32(s[0]);
-n = Convert.ToInt32(s[1]);
-
-
+int m = Convert.ToInt32(s[0]);
+int n = Convert.ToInt32(s[1]);
 
 int[,] array = new int[m, n];
 CreateArray(array);
@@ -24,7 +21,6 @@ for (int i = 1; i < array.GetLength(0); i++)
 }
 
 Console.WriteLine($"\n{minSumLine + 1} - строкa с наименьшей суммой ({sumLine}) элементов ");
-
 
 int SumLineElements(int[,] array, int i)
 {
